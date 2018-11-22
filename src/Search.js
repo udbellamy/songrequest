@@ -1,35 +1,33 @@
 import React from 'react';
 import { TextField, InputAdornment } from '@material-ui/core';
 import BoxIcon from './BoxIcon.js'
+import { inject, observer } from 'mobx-react';
+import StoreFunctions from './utils/StoreFunctions.js';
 
+@inject('SearchStore')
+@observer
 class Search extends React.Component {
 
-  state = {
-    value: "",
-    clicked: false
-  }
-
-  handleClick() {
-    this.setState({
-      clicked: true,
-    })
-  }
-
   render() {
+    const { SearchStore } = this.props;
     return(
       <TextField
         name={this.props.name}
         id={this.props.name}
         label={this.props.label}
         placeholder={this.props.placeholder}
-        value={this.state.value}
+        value={SearchStore[this.props.name]}
         variant="outlined"
-        onChange={e => this.setState({value: e.target.value}) }
+        onChange={e => StoreFunctions.changeStoreValue({
+          storeKey: this.props.name,
+          value: e.target.value,
+          store: "SearchStore"
+        })}
         fullWidth
         InputProps={{
           endAdornment: (
           <InputAdornment position={'end'} >
-            <BoxIcon />
+            <BoxIcon field={this.props.name}/>
           </InputAdornment>)
         }}
       />

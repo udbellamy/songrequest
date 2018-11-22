@@ -5,17 +5,24 @@ import './Material.css';
 import Header from './Header.js';
 import Body from './Body.js';
 
+import { Provider } from 'mobx-react';
+import DevTools from 'mobx-react-devtools';
+import storeBank from './stores/StoreIndex.js';
+
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <Header />
+      <Provider {...storeBank}>
+        <div className="App">
+          <div className="App-header">
+            <Header />
+            <DevTools />
+          </div>
+          <div className="App-body">
+            <Body />
+          </div>
         </div>
-        <div className="App-body">
-          <Body />
-        </div>
-      </div>
+      </Provider>
     );
   }
 }
