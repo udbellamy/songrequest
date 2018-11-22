@@ -4,24 +4,23 @@ import BoxIcon from './BoxIcon.js'
 import { inject, observer } from 'mobx-react';
 import StoreFunctions from './utils/StoreFunctions.js';
 
-@inject('SearchStore')
+@inject('SearchStore', 'UserStore')
 @observer
 class Search extends React.Component {
 
   render() {
-    const { SearchStore } = this.props;
     return(
       <TextField
         name={this.props.name}
         id={this.props.name}
         label={this.props.label}
         placeholder={this.props.placeholder}
-        value={SearchStore[this.props.name]}
+        value={this.props.store[this.props.name]}
         variant="outlined"
         onChange={e => StoreFunctions.changeStoreValue({
           storeKey: this.props.name,
           value: e.target.value,
-          store: "SearchStore"
+          store: this.props.store
         })}
         fullWidth
         InputProps={{

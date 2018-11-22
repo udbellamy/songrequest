@@ -8,6 +8,13 @@ import Body from './Body.js';
 import { Provider } from 'mobx-react';
 import DevTools from 'mobx-react-devtools';
 import storeBank from './stores/StoreIndex.js';
+import WebFont from 'webfontloader';
+
+WebFont.load({
+  google: {
+    families: ['PT Serif', 'sans-serif']
+  }
+});
 
 class App extends Component {
   render() {
