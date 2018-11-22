@@ -1,5 +1,4 @@
 .App {
-  text-align: center;
 }
 
 .App-header {
@@ -7,70 +6,20 @@
 }
 
 .App-body{
-  display: grid;
-  margin: auto;
-  grid-template-columns: auto;
-  grid-auto-rows: minmax(100px, auto);
+  display: flex;
+  justify-content: center;
 }
 
 .App-searchBlock{
-  padding: 2rem;
-  display: grid;
-  grid-template-columns: auto auto;
-  width: 30rem;
-  margin: auto;
+}
+
+.App-searchInner{ 
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
 }
 
 .App-searchBox{
-  padding: 1rem;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@font-face {
-  font-family: 'Material Icons';
-  font-style: normal;
-  font-weight: 400;
-  src: url(https://example.com/MaterialIcons-Regular.eot); /* For IE6-8 */
-  src: local('Material Icons'),
-    local('MaterialIcons-Regular'),
-    url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),
-    url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
-    url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
-}
-
-.material-icons {
-  font-family: 'Material Icons';
-  font-weight: normal;
-  font-style: normal;
-  font-size: 24px;  /* Preferred icon size */
-  display: inline-block;
-  line-height: 1;
-  text-transform: none;
-  letter-spacing: normal;
-  word-wrap: normal;
-  white-space: nowrap;
-  direction: ltr;
-
-  /* Support for all WebKit browsers. */
-  -webkit-font-smoothing: antialiased;
-  /* Support for Safari and Chrome. */
-  text-rendering: optimizeLegibility;
-
-  /* Support for Firefox. */
-  -moz-osx-font-smoothing: grayscale;
-
-  /* Support for IE. */
-  font-feature-settings: 'liga';
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  margin: 0.6rem;
+  width: 20rem;
 }

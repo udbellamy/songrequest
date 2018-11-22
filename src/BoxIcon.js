@@ -1,25 +1,12 @@
 import React from 'react';
-import SearchIcon from '@material-ui/icons/Search';
-import CloseIcon from '@material-ui/icons/Close';
+import './Material.css';
 
 class BoxIcon extends React.Component {
 
-  state = {
-    clicked: false,
-  }
-  
   render() {
-    const {filled} = this.props
-    if (!filled) {
-      return(
-        <SearchIcon />
-      )
-    }
-    else {
-      return(
-        <CloseIcon />
-      )
-    }
+    return(
+      <i className="material-icons md-dark md-inactive">search</i>
+    )
   }
 
 }
