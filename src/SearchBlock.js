@@ -17,11 +17,11 @@ class SearchBlock extends React.Component {
         <div className="App-searchInner">
 
           <div className="App-searchBox">
-            <Search name="artist" label="Artiste" placeholder="AC/DC" store="SearchStore" search={true} />
+            <Search name="artist" label="Artiste" placeholder="AC/DC" storename="SearchStore" store={SearchStore} search={true} />
           </div>
 
           <div className="App-searchBox">
-            <Search name="song" label="Chanson" placeholder="Highway to hell" store="SearchStore" search={true} />
+            <Search name="song" label="Chanson" placeholder="Highway to hell" storename="SearchStore" store={SearchStore} search={true} />
           </div>
           
         </div>

@@ -28,7 +28,7 @@ class NicknamePrompt extends React.Component {
     return(
       <div>
         <p>Comment tu t'appelles mon ptit gars ?</p>
-        <Search name="nickname" label="Pseudo" placeholder="Woody" store="UserStore" />
+        <Search name="nickname" label="Pseudo" placeholder="Woody" storename="UserStore" store={UserStore} />
         <Button
           onClick={e => StoreFunctions.changeStoreValue({
               storeKey: "nicknameSet",

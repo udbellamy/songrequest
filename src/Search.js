@@ -21,7 +21,7 @@ class Search extends React.Component {
         onChange={e => StoreFunctions.changeStoreValue({
           storeKey: this.props.name,
           value: e.target.value,
-          store: this.props.store
+          store: this.props.storename
         })}
         fullWidth
         InputProps={{
