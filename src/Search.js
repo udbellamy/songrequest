@@ -9,6 +9,7 @@ import StoreFunctions from './utils/StoreFunctions.js';
 class Search extends React.Component {
 
   render() {
+    const { SearchStore, UserStore } = this.props;
     return(
       <TextField
         name={this.props.name}
@@ -26,7 +27,7 @@ class Search extends React.Component {
         InputProps={{
           endAdornment: (
           <InputAdornment position={'end'} >
-            <BoxIcon field={this.props.name}/>
+            <BoxIcon field={this.props.name} search={this.props.search}/>
           </InputAdornment>)
         }}
       />

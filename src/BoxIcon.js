@@ -9,8 +9,8 @@ import StoreFunctions from './utils/StoreFunctions.js';
 class BoxIcon extends React.Component {
 
   render() {
-    const { SearchStore, field } = this.props;
-    if ( !SearchStore[field] ) {
+    const { SearchStore, field, search } = this.props;
+    if ( !SearchStore[field] && search ) {
       return(
         <i className="material-icons md-dark md-inactive">search</i>
       )  
