@@ -23,7 +23,7 @@ class Body extends React.Component {
           <SearchBlock />
           <div>
           <TableResult />
-          </div>s
+          </div>
         </div>
       )
     }
