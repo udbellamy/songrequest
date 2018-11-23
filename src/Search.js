@@ -27,7 +27,7 @@ class Search extends React.Component {
         InputProps={{
           endAdornment: (
           <InputAdornment position={'end'} >
-            <BoxIcon field={this.props.name} search={this.props.search}/>
+            <BoxIcon field={this.props.name} search={this.props.search} storename={this.props.storename}/>
           </InputAdornment>)
         }}
       />

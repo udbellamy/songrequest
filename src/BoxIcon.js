@@ -22,7 +22,7 @@ class BoxIcon extends React.Component {
           onClick={e => StoreFunctions.changeStoreValue({
             storeKey: field,
             value: "",
-            store: "SearchStore"
+            store: this.props.storename
           })}  
         >close</i>
       )
