@@ -14,6 +14,7 @@ import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
 import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
 import LastPageIcon from '@material-ui/icons/LastPage';
 import AddCircle from '@material-ui/icons/AddCircle';
+import './Material.css';
 
 const actionsStyles = theme => ({
   root: {
@@ -116,8 +117,8 @@ const styles = theme => ({
 class CustomPaginationActionsTable extends React.Component {
   state = {
     rows: [
-      createData('AC/DC', 'Highway To Hell', <AddCircle />),
-      createData('AC/DC', 'Whole Lotta Rosie', <AddCircle />),
+      createData('AC/DC', 'Highway To Hell', <AddCircle className="material-icons md-add" />),
+      createData('AC/DC', 'Whole Lotta Rosie', <AddCircle className="material-icons md-add" />),
     ].sort((a, b) => (a.calories < b.calories ? -1 : 1)),
     page: 0,
     rowsPerPage: 5,
