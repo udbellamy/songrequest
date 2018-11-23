@@ -11,7 +11,7 @@ class Search extends React.Component {
   render() {
     const { name, label, placeholder, store, storename, search } = this.props;
     return(
-        <div className="App-searchBox">
+        <div className="App-inputBox">
           <TextField
             name={name}
             id={name}
