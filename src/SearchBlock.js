@@ -1,5 +1,5 @@
 import React from 'react';
-import Search from './Search.js';
+import Search from './InputBox.js';
 import { inject, observer } from 'mobx-react';
 
 @inject('SearchStore', 'UserStore')
@@ -15,15 +15,8 @@ class SearchBlock extends React.Component {
     return(
       <div className="App-searchBlock">
         <div className="App-searchInner">
-
-          <div className="App-searchBox">
-            <Search name="artist" label="Artiste" placeholder="AC/DC" storename="SearchStore" store={SearchStore} search={true} />
-          </div>
-
-          <div className="App-searchBox">
-            <Search name="song" label="Chanson" placeholder="Highway to hell" storename="SearchStore" store={SearchStore} search={true} />
-          </div>
-          
+          <Search name="artist" label="Artiste" placeholder="AC/DC" storename="SearchStore" store={SearchStore} search={true} />
+          <Search name="song" label="Chanson" placeholder="Highway to hell" storename="SearchStore" store={SearchStore} search={true} />
         </div>
       </div>
     )

@@ -7,7 +7,7 @@ import StoreFunctions from './utils/StoreFunctions.js';
 import Button from '@material-ui/core/Button';
 import { withStyles } from '@material-ui/core/styles';
 
-import Search from './Search.js';
+import Search from './InputBox.js';
 
 const styles = theme => ({
   button: {
