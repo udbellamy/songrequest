@@ -3,6 +3,7 @@ import SearchBlock from './SearchBlock';
 import NicknamePrompt from './NicknamePrompt';
 
 import { inject, observer } from 'mobx-react';
+import TableResult from './Table-Result';
 
 @inject('UserStore')
 @observer
@@ -17,7 +18,13 @@ class Body extends React.Component {
     }
     else {
       return(
-        <SearchBlock />
+        <div>
+          <p>Tu veux ajouter quelle chanson ?</p>
+          <SearchBlock />
+          <div>
+          <TableResult />
+          </div>s
+        </div>
       )
     }
   }
