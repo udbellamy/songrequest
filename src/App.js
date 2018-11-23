@@ -23,7 +23,7 @@ class App extends Component {
         <div className="App">
           <div className="App-header">
             <Header />
-            <DevTools />
+            {/* <DevTools /> */}
           </div>
           <div className="App-body">
             <Body />
